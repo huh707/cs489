@@ -1,13 +1,13 @@
 import csv
 import random
-
+#note1
 #globalvariable
 q_1st = []
 q_2nd = []
 adder = 0
 
 
-
+#note2
 #1st_function
 #한 사람당 1번째로 물어볼 질문 유형별로 한세트 (3개), 2번째로 물어볼 질문 유형별로 한 세트 (3개) list로 만드는 함수, 1번째는 평균값 제공, 2번째는 우리가 예상치 먼저 제공
 
@@ -36,8 +36,7 @@ def ran_qlist():
     return q_1st,q_2nd
 
 
-
-#성별,나이대,직업군에 따라서 적당히 그룹 결정짓고 그 그룹별로 list다 만들어야함.
+#note3
 #globalvariable
 dil = []
 
@@ -52,13 +51,13 @@ with open('./cs489/dilema.csv','r') as f:
         dil.append(row[2])
 
 
-
+#note4
 #2nd_function
 #숫자 넣으면 번호에 따라서 딜레마 return   
 def q_out(z):
     return dil[z]
 
-
+#note5
 #성별,나이대,직업군에 따라서 적당히 그룹 결정짓고 그 그룹별로 list다 만들어야함.
 #db가 없어서 예시로 만든 부분
 M2S = []
@@ -69,6 +68,8 @@ with open('./cs489/20_male_student.csv','r') as f:
 print(M2S)
 
 
+
+#note6
 #3rd_function
 #딜레마번호, 사람 유형(list이름으로) input으로 넣으면 그 집단의 해당 질문에 대한 평균 return
 #x가 문제번호, L이 사람 유형의 list
@@ -84,6 +85,10 @@ def qavg(x,L):
         return "해당 문제에 대한 데이터가 없어, 평균을 구할 수 없습니다."
     return RAVG
 
+
+
+
+#note7
 #globalvariable
 peo_ans = dict()
 
@@ -111,6 +116,11 @@ def diff(x,L,idd):
     return N
 
 
+
+
+
+
+#note8
 #5th function
 #4th function에서 얻은 list를 바탕으로 해당 문제에 대한 예상 답변 도출
 
